@@ -176,4 +176,9 @@ public class OrganizationFolderRunImpl extends BlueRun {
         }
         return null;
     }
+
+    @Override
+    public boolean isReplayable() {
+        return pipeline.folder.isBuildable();
+    }
 }
